@@ -1,25 +1,10 @@
-﻿@model IList<TestHjemmeside.Models.Adresse>
-
-@{
-    Layout = null;
+﻿@{
+    Layout = "~/Views/Shared/MainLayout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        @foreach (var adresse in Model)
-        {
-            <h2>@adresse.Name</h2>
-            <p> @adresse.Vej </p>
-            @Html.ActionLink("Rediger", "Edit")
-        }
-        adress index g ggy jyg ygygv
-    </div>
-</body>
-</html>
+@foreach (var adresse in Model)
+{
+    <h2>@adresse.Name</h2>
+    <p>@adresse.Vej </p>
+    @Html.ActionLink("Rediger", "Edit")
+}
